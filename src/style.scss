@@ -1,0 +1,51 @@
+@import "cssReset.css";
+@import "./styles/variables";
+@import "./styles/formulate";
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Work+Sans&display=swap');
+
+
+.text{
+    &--primary{
+        font-family: 'Crimson Text', serif;
+    }
+
+    &--secondary{
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    &--black{
+        color: $black;
+    }
+}
+
+.font{
+    @for $i from 1 through 12 {
+        &--s-#{$i}{
+            font-size: $size-1 * $i;
+        }
+    }
+}
+
+
+.scrollbar{
+    scrollbar-width: thin;
+    scrollbar-color: rgba($black, 0.5) rgba($black, 0.15);
+
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgba($black, 0.15);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba($black, 0.5);
+        border-radius: 20px;
+        border: 3px solid rgba($black, 0.15);
+    }
+}
+
+
